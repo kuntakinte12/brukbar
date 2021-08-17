@@ -52,9 +52,13 @@ export default {
     theme: {
       themes: {
         light: {
-          primary: '#009688',
-          secondary: '#607D8B',
-          anchor: '#8c9eff',
+          primary: '#B71C1C',
+          secondary: '#424242',
+          accent: '#EEEEEE',
+          error: '#FF5252',
+          info: '#2196F3',
+          success: '#4CAF50',
+          warning: '#FFC107',
         },
       },
     },

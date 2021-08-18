@@ -45,7 +45,7 @@
     <v-main>
       <v-container>
         <v-card class="my-4" color="accent">
-          <v-carousel>
+          <v-carousel cycle>
             <v-carousel-item
               v-for="(item, i) in items"
               :key="i"
@@ -101,16 +101,16 @@ export default {
     return {
       items: [
         {
-          src: '~/assets/images/one.jpg',
+          src: require('../assets/images/one.jpg'),
         },
         {
-          src: './assets/images/two.jpg',
+          src: require('../assets/images/two.jpg'),
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          src: require('../assets/images/three.jpg'),
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          src: require('../assets/images/four.jpg'),
         },
       ],
       tabs: [

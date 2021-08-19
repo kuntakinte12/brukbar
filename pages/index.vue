@@ -45,7 +45,7 @@
     <v-main>
       <v-container>
         <v-card class="my-4" color="accent">
-          <v-carousel cycle>
+          <v-carousel>
             <v-carousel-item
               v-for="(item, i) in items"
               :key="i"
@@ -58,11 +58,7 @@
 
         <v-card class="my-4" color="accent">
           <v-card-title>Om oss</v-card-title>
-          <v-img
-            class="mx-4"
-            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-            height="200px"
-          ></v-img>
+          <v-img class="mx-4" :src="store_src" height="200px"></v-img>
           <v-card-text
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -77,6 +73,7 @@
         <v-card class="my-4" color="accent">
           <v-card-title>Kontakt</v-card-title>
           <v-card-text>Adress</v-card-text>
+          <div></div>
         </v-card>
       </v-container>
     </v-main>
@@ -126,6 +123,7 @@ export default {
       ],
       drawer: false,
       group: null,
+      store_src: require('../assets/images/store.jpg'),
     }
   },
 }

@@ -12,7 +12,12 @@
           color="grey darken-4"
           class="ml-4 d-none d-sm-flex justify-center"
         >
-          <v-tab v-for="(tab, t) in tabs" :key="t">{{ tab.name }}</v-tab>
+          <v-tab
+            v-for="(tab, t) in tabs"
+            :key="t"
+            @click="$vuetify.goTo(tab.src, options)"
+            >{{ tab.name }}</v-tab
+          >
         </v-tabs>
       </template>
 
@@ -34,7 +39,10 @@
           <v-list-item
             v-for="(tab, t) in tabs"
             :key="t"
-            @click="drawer = false"
+            @click="
+              drawer = false
+              $vuetify.goTo(tab.src)
+            "
           >
             <v-list-item-title>{{ tab.name }}</v-list-item-title>
           </v-list-item>
@@ -44,7 +52,7 @@
 
     <v-main>
       <v-container>
-        <v-card class="my-4" color="accent">
+        <v-card class="my-4" color="accent" id="produkter">
           <v-carousel>
             <v-carousel-item
               v-for="(item, i) in items"
@@ -56,7 +64,7 @@
           </v-carousel>
         </v-card>
 
-        <v-card class="my-4" color="accent">
+        <v-card class="my-4" color="accent" id="om">
           <v-card-title>Om oss</v-card-title>
           <v-img class="mx-4" :src="store_src" height="200px"></v-img>
           <v-card-text
@@ -70,7 +78,7 @@
           >
         </v-card>
 
-        <v-card class="my-4" color="accent">
+        <v-card class="my-4" color="accent" id="kontakt">
           <v-card-title>Kontakt</v-card-title>
           <v-row class="d-flex flex-row mx-4 mb-2">
             <div>
@@ -124,17 +132,25 @@ export default {
       tabs: [
         {
           name: 'Produkter',
+          src: '#produkter',
         },
         {
           name: 'Om oss',
+          src: '#om',
         },
         {
           name: 'Kontakt',
+          src: '#kontakt',
         },
       ],
       drawer: false,
       group: null,
       store_src: require('../assets/images/store.jpg'),
+      options: {
+        duration: 300,
+        offset: 30,
+        easing: 'easeInCubic',
+      },
     }
   },
 }

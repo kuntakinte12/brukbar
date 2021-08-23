@@ -44,7 +44,15 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    [
+      'nuxt-gmaps',
+      {
+        key: 'AIzaSyAqgrOkTfE6o0opAkEoXIPU694ckqxAXpU',
+        libraries: ['places'],
+      },
+    ],
+  ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

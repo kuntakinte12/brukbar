@@ -72,8 +72,19 @@
 
         <v-card class="my-4" color="accent">
           <v-card-title>Kontakt</v-card-title>
-          <v-card-text>Adress</v-card-text>
-          <div></div>
+          <v-row class="d-flex flex-row mx-4 mb-2">
+            <div>
+              <span class="thick">Address</span><br />
+              <address>
+                Sandgatan 479 <br />
+                740 35 <br />
+                Enköping
+              </address>
+            </div>
+            <div></div>
+          </v-row>
+
+          <Map class="ma-4" />
         </v-card>
       </v-container>
     </v-main>
@@ -137,5 +148,8 @@ div.v-toolbar__extension {
   background-color: #e57373;
   height: 25px !important;
   margin-top: 23px;
+}
+span.thick {
+  font-weight: bold;
 }
 </style>

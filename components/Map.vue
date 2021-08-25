@@ -28,20 +28,15 @@
 export default {
   data() {
     return {
-      currentLocation: {},
+      currentLocation: {
+        lat: 59.63573573138561,
+        lng: 17.077629176250568,
+      },
       circleOptions: {},
       locations: [
         {
-          lat: 44.933076,
-          lng: 15.629058,
-        },
-        {
-          lat: 45.815,
-          lng: '15.9819',
-        },
-        {
-          lat: '45.12',
-          lng: '16.21',
+          lat: 59.63573573138561,
+          lng: 17.077629176250568,
         },
       ],
       pins: {

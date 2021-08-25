@@ -80,6 +80,7 @@
 
         <v-card class="my-4" color="accent" id="kontakt">
           <v-card-title>Kontakt</v-card-title>
+
           <v-row class="d-flex flex-row mx-4 mb-2">
             <div>
               <span class="thick">Address</span><br />
@@ -148,7 +149,7 @@ export default {
       store_src: require('../assets/images/store.jpg'),
       options: {
         duration: 300,
-        offset: 30,
+        offset: 10,
         easing: 'easeInCubic',
       },
     }

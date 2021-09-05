@@ -82,15 +82,27 @@
           <v-card-title>Kontakt</v-card-title>
 
           <v-row class="d-flex flex-row mx-4 mb-2">
-            <div>
+            <div class="mr-10">
               <span class="thick">Address</span><br />
               <address>
-                Sandgatan 479 <br />
-                740 35 <br />
+                Kvartsgatan 1C <br />
+                749 40 <br />
                 Enköping
               </address>
             </div>
-            <div></div>
+            <div class="mr-10">
+              <span class="thick">Kontaktinformation</span><br />
+              <a href="tel:12345">12345 </a><br />
+              <a href="mailto:brukbar@brukbar.nu">brukbar@brukbar.nu</a>
+            </div>
+            <div class="mr-10">
+              <span class="thick">Öppettider</span><br />
+              <address>
+                Tisdagar: <br />
+                Lördagar: <br />
+                Övriga dagar stängt.
+              </address>
+            </div>
           </v-row>
 
           <Map class="ma-4" />

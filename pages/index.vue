@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <v-app-bar color="white" app elevate-on-scroll>
-      <v-container class="d-flex justify-center mt-5">
+    <v-app-bar color="#ffffff" app elevate-on-scroll>
+      <v-container class="d-flex justify-center mt-6">
         <img class="logo" src="~assets/logo/circle.png" alt="" />
         <img class="logo" src="~assets/logo/text_black.png" alt="" />
       </v-container>
@@ -53,7 +53,13 @@
     <v-main>
       <v-container>
         <v-card class="my-4" color="accent" id="produkter">
-          <v-carousel>
+          <v-carousel
+            v-model="activeSlide"
+            :touch="{
+              left: () => activeSlide--,
+              right: () => activeSlide++,
+            }"
+          >
             <v-carousel-item
               v-for="(item, i) in items"
               :key="i"
@@ -78,30 +84,29 @@
           >
         </v-card>
 
-        <v-card class="my-4" color="accent" id="kontakt">
+        <v-card class="my-4 pb-1" color="accent" id="kontakt">
           <v-card-title>Kontakt</v-card-title>
 
           <v-row class="d-flex flex-row mx-4 mb-2">
             <div class="mr-10">
               <span class="thick">Address</span><br />
-              <address>
+              <a href="https://goo.gl/maps/jWJW6aofxKJmnAzP7" target="_blank">
                 Kvartsgatan 1C <br />
                 749 40 <br />
                 Enköping
-              </address>
+              </a>
             </div>
             <div class="mr-10">
               <span class="thick">Kontaktinformation</span><br />
-              <a href="tel:12345">12345 </a><br />
-              <a href="mailto:brukbar@brukbar.nu">brukbar@brukbar.nu</a>
+              Telefon: <a href="tel:0708955920">070-895 59 20</a><br />
+              Swish: <a href="tel:1233667581">123-366 7581</a><br />
+              Mail: <a href="mailto:brukbar@brukbar.nu">brukbar@brukbar.nu</a>
             </div>
             <div class="mr-10">
               <span class="thick">Öppettider</span><br />
-              <address>
-                Tisdagar: <br />
-                Lördagar: <br />
-                Övriga dagar stängt.
-              </address>
+              Torsdagar: 13.00 - 17.00 <br />
+              Fredagar: 13.00 - 17.00 <br />
+              Lördagar: 10.00 - 14.00<br />
             </div>
           </v-row>
 
@@ -110,13 +115,31 @@
       </v-container>
     </v-main>
 
-    <v-footer color="grey lighten-2" app>
+    <v-footer color="accent" app>
       <v-container>
         <v-row align="center" justify="center">
           <v-divider class="ma-2" vertical></v-divider>
-          <v-icon class="ma-2" large>fas fa-map-marker-alt</v-icon>
-          <v-icon class="ma-2" large>fab fa-facebook-square</v-icon>
-          <v-icon class="ma-2" large>fab fa-instagram</v-icon>
+          <a
+            class="a-icon"
+            href="https://goo.gl/maps/jWJW6aofxKJmnAzP7"
+            target="_blank"
+          >
+            <v-icon class="ma-2" large>fas fa-map-marker-alt</v-icon>
+          </a>
+          <a
+            class="a-icon"
+            href="https://www.facebook.com/profile.php?id=100070918456870"
+            target="_blank"
+          >
+            <v-icon class="ma-2" large>fab fa-facebook-square</v-icon>
+          </a>
+          <a
+            class="a-icon"
+            href="https://www.instagram.com/brukbarab/"
+            target="_blank"
+          >
+            <v-icon class="ma-2" large>fab fa-instagram</v-icon>
+          </a>
           <v-divider class="ma-2" vertical></v-divider>
         </v-row>
       </v-container>
@@ -142,6 +165,7 @@ export default {
           src: require('../assets/images/four.jpg'),
         },
       ],
+      activeSlide: 0,
       tabs: [
         {
           name: 'Produkter',
@@ -180,5 +204,8 @@ div.v-toolbar__extension {
 }
 span.thick {
   font-weight: bold;
+}
+a.a-icon {
+  color: #f2f2f2 !important;
 }
 </style>

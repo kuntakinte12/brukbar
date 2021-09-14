@@ -5,7 +5,7 @@
     :cluster="{ options: { styles: clusterStyle } }"
     :center="{ lat: locations[0].lat, lng: locations[0].lng }"
     :options="{ fullscreenControl: false, styles: mapStyle }"
-    :zoom="6"
+    :zoom="13"
   >
     <GMapMarker
       v-for="location in locations"
@@ -29,14 +29,14 @@ export default {
   data() {
     return {
       currentLocation: {
-        lat: 59.63573573138561,
-        lng: 17.077629176250568,
+        lat: 59.64521130641032,
+        lng: 17.12068778102934,
       },
       circleOptions: {},
       locations: [
         {
-          lat: 59.63573573138561,
-          lng: 17.077629176250568,
+          lat: 59.64521130641032,
+          lng: 17.12068778102934,
         },
       ],
       pins: {

@@ -96,21 +96,27 @@
             href="https://goo.gl/maps/jWJW6aofxKJmnAzP7"
             target="_blank"
           >
-            <v-icon class="ma-2" large>fas fa-map-marker-alt</v-icon>
+            <v-icon class="ma-2" large color="#DD0612"
+              >fas fa-map-marker-alt</v-icon
+            >
           </a>
           <a
             class="a-icon"
             href="https://www.facebook.com/profile.php?id=100070918456870"
             target="_blank"
           >
-            <v-icon class="ma-2" large>fab fa-facebook-square</v-icon>
+            <v-icon class="ma-2" large color="#4267B2"
+              >fab fa-facebook-square</v-icon
+            >
           </a>
           <a
             class="a-icon"
             href="https://www.instagram.com/brukbarab/"
             target="_blank"
           >
-            <v-icon class="ma-2" large>fab fa-instagram</v-icon>
+            <v-icon class="ma-2 fa-instagram" large
+              >fab fa-instagram-square</v-icon
+            >
           </a>
           <v-divider class="ma-2" vertical></v-divider>
         </v-row>
@@ -179,5 +185,19 @@ span.thick {
 }
 a.a-icon {
   color: #f2f2f2 !important;
+}
+.fa-instagram {
+  font-size: 30px;
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>

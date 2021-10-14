@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar color="#ffffff" app elevate-on-scroll>
+    <v-app-bar color="#f5f3ef" app elevate-on-scroll>
       <v-container class="d-flex justify-center mt-6">
         <img class="logo" src="~assets/logo/circle.png" alt="" />
         <img class="logo" src="~assets/logo/text_black.png" alt="" />
@@ -10,7 +10,7 @@
         <v-tabs
           flat
           color="grey darken-4"
-          class="ml-4 d-none d-sm-flex justify-center"
+          class="ml-4 d-sm-flex justify-center"
         >
           <v-tab
             v-for="(tab, t) in tabs"
@@ -20,39 +20,11 @@
           >
         </v-tabs>
       </template>
-
-      <v-app-bar-nav-icon
-        class="d-flex d-sm-none flex-row-reverse"
-        @click="drawer = true"
-      ></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      temporary
-      right
-      color="accent"
-    >
-      <v-list nav dense>
-        <v-list-item-group v-model="group" active-class="text--accent-4">
-          <v-list-item
-            v-for="(tab, t) in tabs"
-            :key="t"
-            @click="
-              drawer = false
-              $vuetify.goTo(tab.src)
-            "
-          >
-            <v-list-item-title>{{ tab.name }}</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
-
     <v-main>
-      <v-container>
-        <v-card class="my-4" color="accent" id="produkter">
+      <v-container color="#f5f3ef">
+        <v-card class="my-4" color="accent" id="start">
           <v-carousel
             v-model="activeSlide"
             :touch="{
@@ -168,8 +140,8 @@ export default {
       activeSlide: 0,
       tabs: [
         {
-          name: 'Produkter',
-          src: '#produkter',
+          name: 'Start',
+          src: '#start',
         },
         {
           name: 'Om oss',
@@ -198,7 +170,7 @@ export default {
   max-height: 100px;
 }
 div.v-toolbar__extension {
-  background-color: #e57373;
+  background-color: #f5f3ef;
   height: 25px !important;
   margin-top: 23px;
 }

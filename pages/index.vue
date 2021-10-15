@@ -207,7 +207,7 @@ a.a-icon {
   -webkit-text-fill-color: transparent;
 }
 .header-shadow {
-  box-shadow: 0px 1px 6px black;
+  box-shadow: 0px 1px 6px gray;
 }
 .header {
   background-color: #f5f3ef;

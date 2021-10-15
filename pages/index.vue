@@ -120,9 +120,7 @@
             href="https://www.instagram.com/brukbarab/"
             target="_blank"
           >
-            <v-icon class="ma-2 fa-instagram" large
-              >fab fa-instagram-square</v-icon
-            >
+            <v-icon class="ma-2" large color="#E56969">fab fa-instagram</v-icon>
           </a>
           <v-divider class="ma-2" vertical></v-divider>
         </v-row>
@@ -186,30 +184,6 @@ span.thick {
 }
 a.a-icon {
   color: #f2f2f2 !important;
-}
-.fa-instagram {
-  font-size: 30px;
-  background: #d6249f;
-  color: transparent;
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-  background: -webkit-radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .header-shadow {
   box-shadow: 0px 1px 6px gray;

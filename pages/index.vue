@@ -49,13 +49,16 @@
           <v-card-title>Om oss</v-card-title>
           <v-img class="mx-4" :src="store_src" height="200px"></v-img>
           <v-card-text
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.</v-card-text
+            ><p>Är du en hemmafixare som gillar second hand?</p>
+            <p>
+              Lördag den 16 oktober på Kvartsgatan 1 C i Enköping slår vi upp
+              dörrarna för Sveriges första cirkulära järnhandel. Välkommen!
+            </p>
+            <p>
+              Har du begagnade och brukbara saker hemma som du vill bli av med?
+              Kontakta oss gärna, du kan lämna på Kvartsgatan eller vi kan hämta
+              hos Dig (inom kommunen).
+            </p></v-card-text
           >
         </v-card>
 
@@ -187,6 +190,7 @@ a.a-icon {
 .fa-instagram {
   font-size: 30px;
   background: #d6249f;
+  color: transparent;
   background: radial-gradient(
     circle at 30% 107%,
     #fdf497 0%,
@@ -195,7 +199,7 @@ a.a-icon {
     #d6249f 60%,
     #285aeb 90%
   );
-  background: -webkit-linear-gradient(
+  background: -webkit-radial-gradient(
     circle at 30% 107%,
     #fdf497 0%,
     #fdf497 5%,
@@ -203,6 +207,7 @@ a.a-icon {
     #d6249f 60%,
     #285aeb 90%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -216,6 +221,6 @@ a.a-icon {
   z-index: 1000;
 }
 .header-margin {
-  margin-top: 27px;
+  margin-top: 8px;
 }
 </style>

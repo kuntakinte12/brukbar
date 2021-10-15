@@ -1,26 +1,29 @@
 <template>
   <v-app>
-    <v-app-bar color="#f5f3ef" app elevate-on-scroll>
-      <v-container class="d-flex justify-center mt-6">
-        <img class="logo" src="~assets/logo/circle.png" alt="" />
-        <img class="logo" src="~assets/logo/text_black.png" alt="" />
-      </v-container>
-
-      <template v-slot:extension>
-        <v-tabs
-          flat
-          color="grey darken-4"
-          class="ml-4 d-sm-flex justify-center"
+    <div class="header header-shadow">
+      <v-row class="d-flex justify-center">
+        <img class="logo header-margin" src="~assets/logo/circle.png" alt="" />
+        <img
+          class="logo header-margin"
+          src="~assets/logo/text_black.png"
+          alt=""
+        />
+      </v-row>
+      <v-card class="d-flex justify-center" color="#f5f3ef" flat tile>
+        <v-card
+          v-for="(tab, t) in tabs"
+          :key="t"
+          @click="$vuetify.goTo(tab.src, options)"
+          class="px-2 pt-1"
+          outlined
+          tile
+          color="#f5f3ef"
+          height="35px"
         >
-          <v-tab
-            v-for="(tab, t) in tabs"
-            :key="t"
-            @click="$vuetify.goTo(tab.src, options)"
-            >{{ tab.name }}</v-tab
-          >
-        </v-tabs>
-      </template>
-    </v-app-bar>
+          {{ tab.name }}
+        </v-card>
+      </v-card>
+    </div>
 
     <v-main>
       <v-container color="#f5f3ef">
@@ -163,7 +166,7 @@ export default {
       store_src: require('../assets/images/store.jpg'),
       options: {
         duration: 300,
-        offset: 10,
+        offset: 140,
         easing: 'easeInCubic',
       },
     }
@@ -174,11 +177,6 @@ export default {
 <style>
 .logo {
   max-height: 100px;
-}
-div.v-toolbar__extension {
-  background-color: #f5f3ef;
-  height: 25px !important;
-  margin-top: 23px;
 }
 span.thick {
   font-weight: bold;
@@ -197,7 +195,27 @@ a.a-icon {
     #d6249f 60%,
     #285aeb 90%
   );
+  background: -webkit-linear-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.header-shadow {
+  box-shadow: 0px 1px 6px black;
+}
+.header {
+  background-color: #f5f3ef;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-margin {
+  margin-top: 27px;
 }
 </style>

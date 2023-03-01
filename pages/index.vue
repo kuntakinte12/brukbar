@@ -49,15 +49,23 @@
           <v-card-title>Om oss</v-card-title>
           <v-img class="mx-4" :src="store_src" height="200px"></v-img>
           <v-card-text
-            ><p>Är du en hemmafixare som gillar second hand?</p>
-            <p>
-              Lördag den 16 oktober på Kvartsgatan 1 C i Enköping slår vi upp
-              dörrarna för Sveriges första cirkulära järnhandel. Välkommen!
+            ><p class="font-weight-medium">
+              Är du en hemmafixare som gillar att använda ordentliga brukbara
+              något äldre verktyg?
             </p>
-            <p>
+            <p class="font-weight-medium">
+              Kom in i butiken och kolla våra priser för begagnade verktyg,
+              elverktyg, specialverktyg, spik & skruv, husgeråd, belysning, vvs,
+              trädgårdsredskap m.m.
+            </p>
+            <p class="font-weight-medium">
               Har du begagnade och brukbara saker hemma som du vill bli av med?
-              Kontakta oss gärna, du kan lämna på Kvartsgatan eller vi kan hämta
-              hos Dig (inom kommunen).
+              Kontakta oss gärna, du kan även lämna i eller utanför butiken. Vi
+              kan även hämta hos Dig (inom kommunen).
+            </p>
+            <p class="font-weight-bold text-decoration-underline">
+              Ny address är Sämskarbogatan 8. Infart från Salavägen mittemot
+              Willys.
             </p></v-card-text
           >
         </v-card>
@@ -68,9 +76,9 @@
           <v-row class="d-flex flex-row mx-4 mb-2">
             <div class="mr-10">
               <span class="thick">Address</span><br />
-              <a href="https://goo.gl/maps/jWJW6aofxKJmnAzP7" target="_blank">
-                Kvartsgatan 1C <br />
-                749 40 <br />
+              <a href="https://goo.gl/maps/NguWL6DicbRTkH5S8" target="_blank">
+                Sämskarbogatan 8 <br />
+                745 33 <br />
                 Enköping
               </a>
             </div>
@@ -99,7 +107,7 @@
           <v-divider class="ma-2" vertical></v-divider>
           <a
             class="a-icon"
-            href="https://goo.gl/maps/jWJW6aofxKJmnAzP7"
+            href="https://goo.gl/maps/9DiYsjSY7LGLDyf88"
             target="_blank"
           >
             <v-icon class="ma-2" large color="#DD0612"
@@ -145,6 +153,9 @@ export default {
         },
         {
           src: require('../assets/images/four.jpg'),
+        },
+        {
+          src: require('../assets/images/five.jpg'),
         },
       ],
       activeSlide: 0,
